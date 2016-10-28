@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".view.MoviesApplication">
+        android:name=".MoviesApplication">
         <activity
             android:name=".view.activity.MoviesActivity"
             android:label="@string/app_name"

@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.view;
+package com.xurxodev.moviesandroidkata;
 
 import android.app.Application;
 
