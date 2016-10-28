@@ -30,6 +30,7 @@ The recommendation for this exercise is:
     1. Configure dagger 
     2. Identify singleton dependencies.
     3. Create module/s, component/s, custom application, set targets where inject dependencies
+    4. Execute the app and verify that all is right
     
 ## Documentation
 
