@@ -1,5 +1,6 @@
 package com.xurxodev.moviesandroidkata.data;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.google.gson.Gson;
@@ -13,12 +14,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class DiskMovieRepository implements MovieRepository {
 
-    private Context context;
+    private Context applicationContext;
+    private Gson gson;
 
-    public DiskMovieRepository(Context context){
-       this.context = context;
+    @Inject
+    public DiskMovieRepository(Application applicationContext, Gson gson){
+       this.applicationContext = applicationContext;
+       this.gson = gson;
     }
 
     @Override
@@ -26,7 +32,7 @@ public class DiskMovieRepository implements MovieRepository {
         String jsonString = null;
 
         try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.movies);
+            InputStream inputStream = applicationContext.getResources().openRawResource(R.raw.movies);
             byte[] b = new byte[inputStream.available()];
             inputStream.read(b);
 
@@ -35,7 +41,6 @@ public class DiskMovieRepository implements MovieRepository {
             //TODO: fix io exception
         }
 
-        Gson gson = new Gson();
         Movie[] movies = gson.fromJson(jsonString, Movie[].class);
 
         return Arrays.asList(movies);
