@@ -43,7 +43,7 @@ public class MoviesFragment extends Fragment {
     }
 
     private List<Movie> loadMovies(){
-        movieRepository = new DiskMovieRepository(getActivity().getApplicationContext());
+        movieRepository = new DiskMovieRepository(getActivity().getApplication());
 
         return movieRepository.getMovies();
     }

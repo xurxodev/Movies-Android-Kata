@@ -1,5 +1,6 @@
 package com.xurxodev.moviesandroidkata.data;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.google.gson.Gson;
@@ -15,10 +16,11 @@ import java.util.List;
 
 public class DiskMovieRepository implements MovieRepository {
 
-    private Context context;
 
-    public DiskMovieRepository(Context context){
-       this.context = context;
+    private Context applicationContext;
+
+    public DiskMovieRepository(Application applicationContext){
+        this.applicationContext = applicationContext;
     }
 
     @Override
@@ -26,7 +28,7 @@ public class DiskMovieRepository implements MovieRepository {
         String jsonString = null;
 
         try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.movies);
+            InputStream inputStream = applicationContext.getResources().openRawResource(R.raw.movies);
             byte[] b = new byte[inputStream.available()];
             inputStream.read(b);
 
