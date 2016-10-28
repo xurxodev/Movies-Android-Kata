@@ -7,7 +7,7 @@ Movies Android kata for practice Best Practices in Android implemented by Jorge 
 
 ## Considerations 
 
-Master branch contains already solved katas, exists branch for every kata.
+Master branch contains already solved katas, exists a branch for every kata.
 
 ## Getting started
 
