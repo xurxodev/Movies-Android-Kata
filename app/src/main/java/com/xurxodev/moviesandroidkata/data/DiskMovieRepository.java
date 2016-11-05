@@ -6,7 +6,6 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.xurxodev.moviesandroidkata.R;
 import com.xurxodev.moviesandroidkata.model.Movie;
-import com.xurxodev.moviesandroidkata.view.boundary.MovieRepository;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DiskMovieRepository implements MovieRepository {
+public class DiskMovieRepository {
 
 
     private Context applicationContext;
@@ -23,7 +22,6 @@ public class DiskMovieRepository implements MovieRepository {
         this.applicationContext = applicationContext;
     }
 
-    @Override
     public List<Movie> getMovies() {
         String jsonString = null;
 

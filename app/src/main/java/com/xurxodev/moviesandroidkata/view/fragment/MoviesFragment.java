@@ -11,13 +11,12 @@ import com.xurxodev.moviesandroidkata.R;
 import com.xurxodev.moviesandroidkata.data.DiskMovieRepository;
 import com.xurxodev.moviesandroidkata.model.Movie;
 import com.xurxodev.moviesandroidkata.view.adapter.MoviesAdapter;
-import com.xurxodev.moviesandroidkata.view.boundary.MovieRepository;
 
 import java.util.List;
 
 public class MoviesFragment extends Fragment {
 
-    private MovieRepository movieRepository;
+    private DiskMovieRepository movieRepository;
     private MoviesAdapter adapter;
     private RecyclerView recyclerView;
     private View rootView;
