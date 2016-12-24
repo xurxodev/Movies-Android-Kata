@@ -1,8 +1,9 @@
-# Movies-Android-Kata
+# Movies-Android-Kata Part2
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
 
-- We are here to practice Dependency Injection.
-- We are going to use [Dagger2](https://google.github.io/dagger/) as Dependency Injector.
+Kata 2
+
+- We are here to practice Model View Presenter.
 - We are going to practice pair programming.
 
 ## Considerations 
@@ -15,29 +16,28 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
-The application initial state without dependency injection is ready to just start refactoring. 
+Initial state in this branch is with dependency injection but not defined architecture. We are going refactor to Clean Architecture. Begins with  
 
 ## Tasks
 
-Your task as Android Developer is to **refactoring to inject dependencies**, only singleton dependencies.
+Your task as Android Developer is to **refactoring presentation layer to Model View Presenter**.
 The recommendation for this exercise is:
 
   * Before starting
-    1. Fork this repository and Checkout `kata-di-movies` branch or download zip.
+    1. Fork this repository and Checkout `kata-mvp-movies` branch or download zip.
     3. Execute the application, explore it manually and make yourself familiar with the code.
 
   * To help you get started:     
-    1. Configure dagger 
-    2. Identify singleton dependencies.
-    3. Create module/s, component/s, custom application, set targets where inject dependencies
+    1. Identify presentation and view logic
+    2. Create presenter for current view and its view abstraction.
+    3. Refactoring activity or fragment for implement view abstraction
     4. Execute the app and verify that all is right
     
 ## Documentation
 
 There are some links which can be useful to finish these tasks:
 
-* [Official docs Dagger 2](https://google.github.io/dagger/)
-* [Dependency Injection with Dagger 2](https://guides.codepath.com/android/Dependency-Injection-with-Dagger-2)
+* [Model-View-Presenter Architecture in Android Applications](http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/)
 
 ##Developed By
 
