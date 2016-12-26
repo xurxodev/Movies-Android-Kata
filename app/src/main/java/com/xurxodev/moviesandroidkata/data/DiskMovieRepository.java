@@ -14,8 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DiskMovieRepository {
-
-
     private Context applicationContext;
 
     public DiskMovieRepository(Application applicationContext){
@@ -38,6 +36,16 @@ public class DiskMovieRepository {
         Gson gson = new Gson();
         Movie[] movies = gson.fromJson(jsonString, Movie[].class);
 
+        simulateDelay();
+
         return Arrays.asList(movies);
+    }
+
+    private void simulateDelay(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
