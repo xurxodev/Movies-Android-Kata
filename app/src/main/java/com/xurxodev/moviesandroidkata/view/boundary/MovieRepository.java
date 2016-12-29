@@ -1,8 +1,9 @@
 package com.xurxodev.moviesandroidkata.view.boundary;
 
-/**
- * Created by xurxodev on 29/12/16.
- */
+import com.xurxodev.moviesandroidkata.model.Movie;
 
-public class MovieRepository {
+import java.util.List;
+
+public interface MovieRepository {
+    List<Movie> getMovies();
 }
