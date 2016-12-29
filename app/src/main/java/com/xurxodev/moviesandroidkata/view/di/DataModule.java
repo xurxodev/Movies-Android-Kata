@@ -6,7 +6,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.xurxodev.moviesandroidkata.data.DiskMovieRepository;
-import com.xurxodev.moviesandroidkata.view.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.presenter.boundary.MovieRepository;
 
 import javax.inject.Singleton;
 

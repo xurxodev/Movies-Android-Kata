@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.view.boundary;
+package com.xurxodev.moviesandroidkata.presenter.boundary;
 
 import com.xurxodev.moviesandroidkata.model.Movie;
 
