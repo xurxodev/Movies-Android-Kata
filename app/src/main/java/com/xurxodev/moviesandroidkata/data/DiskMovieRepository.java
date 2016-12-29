@@ -43,6 +43,16 @@ public class DiskMovieRepository implements MovieRepository {
 
         Movie[] movies = gson.fromJson(jsonString, Movie[].class);
 
+        simulateDelay();
+
         return Arrays.asList(movies);
+    }
+
+    private void simulateDelay(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

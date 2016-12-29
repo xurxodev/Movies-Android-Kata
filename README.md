@@ -1,11 +1,7 @@
 # Movies-Android-Kata
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
 
-- We are here to practice Dependency Injection.
-- We are going to use [Dagger2](https://google.github.io/dagger/) as Dependency Injector.
-- We are going to practice pair programming.
-
-## Considerations 
+## Considerations
 
 Master branch contains already solved katas, exists a branch for every kata.
 
@@ -14,30 +10,6 @@ Master branch contains already solved katas, exists a branch for every kata.
 This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
-
-The application initial state without dependency injection is ready to just start refactoring. 
-
-## Tasks
-
-Your task as Android Developer is to **refactoring to inject dependencies**, only singleton dependencies.
-The recommendation for this exercise is:
-
-  * Before starting
-    1. Fork this repository and Checkout `kata-di-movies` branch or download zip.
-    3. Execute the application, explore it manually and make yourself familiar with the code.
-
-  * To help you get started:     
-    1. Configure dagger 
-    2. Identify singleton dependencies.
-    3. Create module/s, component/s, custom application, set targets where inject dependencies
-    4. Execute the app and verify that all is right
-    
-## Documentation
-
-There are some links which can be useful to finish these tasks:
-
-* [Official docs Dagger 2](https://google.github.io/dagger/)
-* [Dependency Injection with Dagger 2](https://guides.codepath.com/android/Dependency-Injection-with-Dagger-2)
 
 ##Developed By
 

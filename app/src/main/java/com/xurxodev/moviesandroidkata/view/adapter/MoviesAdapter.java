@@ -20,8 +20,14 @@ public class MoviesAdapter
 
     public List<Movie> movies = new ArrayList<>();
 
-    public MoviesAdapter(List<Movie> movies) {
+    public void setMovies(List<Movie> movies) {
         this.movies = movies;
+        notifyDataSetChanged();
+    }
+
+    public void clearMovies() {
+        movies = new ArrayList<>();
+        notifyDataSetChanged();
     }
 
     @Override
@@ -36,11 +42,8 @@ public class MoviesAdapter
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.movieItem = movies.get(position);
 
-        //int resizeHeight = holder.competitorImageView.getResources().getInteger(R.integer.image_competitor_resize_height);
-
         Picasso.with(holder.movieImageView.getContext())
                 .load(holder.movieItem.getImage())
-                //.resize(0, resizeHeight)
                 .into(holder.movieImageView);
 
         holder.titleTextView.setText(holder.movieItem .getTitle());
