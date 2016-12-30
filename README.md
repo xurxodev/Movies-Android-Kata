@@ -1,7 +1,12 @@
-# Movies-Android-Kata
+# Movies-Android-Kata Part2
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
 
-## Considerations
+Kata 2
+
+- We are here to practice Model View Presenter.
+- We are going to practice pair programming.
+
+## Considerations 
 
 Master branch contains already solved katas, exists a branch for every kata.
 
@@ -10,6 +15,29 @@ Master branch contains already solved katas, exists a branch for every kata.
 This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
+
+Initial state in this branch is with dependency injection but not defined architecture. We are going refactor to Clean Architecture. Begins with
+
+## Tasks
+
+Your task as Android Developer is to **refactoring presentation layer to Model View Presenter**.
+The recommendation for this exercise is:
+
+  * Before starting
+    1. Fork this repository and Checkout `kata-mvp-movies` branch or download zip.
+    3. Execute the application, explore it manually and make yourself familiar with the code.
+
+  * To help you get started:
+    1. Identify presentation and view logic
+    2. Create presenter for current view and its view abstraction.
+    3. Refactoring activity or fragment for implement view abstraction
+    4. Execute the app and verify that all is right
+
+## Documentation
+
+There are some links which can be useful to finish these tasks:
+
+* [Model-View-Presenter Architecture in Android Applications](http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/)
 
 ##Developed By
 
