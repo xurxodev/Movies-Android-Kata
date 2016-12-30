@@ -32,6 +32,11 @@ The recommendation for this exercise is:
     2. Create presenter for current view and its view abstraction.
     3. Refactoring activity or fragment for implement view abstraction
     4. Execute the app and verify that all is right
+    
+  * Estra task if you feel with force :)
+    1. Create movies detail screen with mpv pattern
+    2. Create navigator for navigate from movies to movie
+  
 
 ## Documentation
 
