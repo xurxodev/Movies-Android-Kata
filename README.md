@@ -16,7 +16,7 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
-Initial state in this branch is with dependency injection but not defined architecture. We are going refactor to Clean Architecture. Begins with
+Initial state in this branch is without presenter is ready for refactoring to mvp.
 
 ## Tasks
 
@@ -51,7 +51,7 @@ There are some links which can be useful to finish these tasks:
 ##License
 
 
-    Copyright 2016 Jorge Sánchez Fernández
+    Copyright 2017 Jorge Sánchez Fernández
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
