@@ -1,5 +1,10 @@
-# Movies-Android-Kata
+# Movies-Android-Kata Part3
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
+
+Kata 3
+
+- We are here to practice Clean architecture with domain and data layers.
+- We are going to practice pair programming.
 
 ## Considerations
 
@@ -11,6 +16,35 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
+Initial state in this branch is without domain layer and is ready for refactoring.
+
+## Tasks
+
+Your task as Android Developer is to **refactoring presentation layer to Model View Presenter**.
+The recommendation for this exercise is:
+
+  * Before starting
+    1. Fork this repository and Checkout `kata_domain_data-movies` branch or download zip.
+    3. Execute the application, explore it manually and make yourself familiar with the code.
+
+  * To help you get started:
+    1. Identify domain (application logic and business logic)
+    2. Identify domain boundaries
+    3. Create usecases or interactors and entities.
+    4. Refactoring activity or fragment, presenters.
+    5. Execute the app and verify that all is right
+
+  * Estra task if you feel with force :)
+    1. Create movies detail screen according to clean architecture
+    2. Create navigator for navigate from movies to movie
+
+
+## Documentation
+
+There are some links which can be useful to finish these tasks:
+
+* [Model-View-Presenter Architecture in Android Applications](http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/)
+
 ##Developed By
 
 * Jorge Sánchez Fernández aka [xurxodev](https://twitter.com/xurxodev)
@@ -18,7 +52,7 @@ This repository contains an Android application to show movies information:
 ##License
 
 
-    Copyright 2016 Jorge Sánchez Fernández
+    Copyright 2017 Jorge Sánchez Fernández
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
