@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.view.di;
+package com.xurxodev.moviesandroidkata.di;
 
 import android.app.Application;
 
@@ -6,7 +6,8 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.xurxodev.moviesandroidkata.data.DiskMovieRepository;
-import com.xurxodev.moviesandroidkata.presenter.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.usecase.GetMoviesUseCase;
 
 import javax.inject.Singleton;
 
@@ -30,5 +31,12 @@ public class DataModule {
     MovieRepository provideMovieRepository(Application applicationContext,Gson gson) {
         MovieRepository diskMovieRepository = new DiskMovieRepository(applicationContext, gson);
         return diskMovieRepository;
+    }
+
+    @Provides
+    @Singleton
+    GetMoviesUseCase provideGetMoviesUseCase(MovieRepository movieRepository) {
+        GetMoviesUseCase getMoviesUseCase = new GetMoviesUseCase(movieRepository);
+        return getMoviesUseCase;
     }
 }

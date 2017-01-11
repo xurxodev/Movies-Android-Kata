@@ -5,8 +5,8 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.xurxodev.moviesandroidkata.R;
-import com.xurxodev.moviesandroidkata.model.Movie;
-import com.xurxodev.moviesandroidkata.presenter.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.entity.Movie;
+import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
 
 import java.io.IOException;
 import java.io.InputStream;

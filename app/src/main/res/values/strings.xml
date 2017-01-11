@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="movies_count_text">Movies: %d</string>
     <string name="loading_movies_text">Loading movies...</string>
+    <string name="connection_error_text">Has occurred a problem with the network, try next please</string>
 </resources>

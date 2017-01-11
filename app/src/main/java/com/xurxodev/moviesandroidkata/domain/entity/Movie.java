@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.model;
+package com.xurxodev.moviesandroidkata.domain.entity;
 
 public class Movie {
     private String image;

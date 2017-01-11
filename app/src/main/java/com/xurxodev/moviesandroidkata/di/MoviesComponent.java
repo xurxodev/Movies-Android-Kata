@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.view.di;
+package com.xurxodev.moviesandroidkata.di;
 
 import com.xurxodev.moviesandroidkata.view.fragment.MoviesFragment;
 

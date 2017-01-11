@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xurxodev.moviesandroidkata.R;
-import com.xurxodev.moviesandroidkata.model.Movie;
+import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 
 import java.util.ArrayList;
 import java.util.List;

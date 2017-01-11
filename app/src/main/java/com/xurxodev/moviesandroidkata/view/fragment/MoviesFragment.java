@@ -9,10 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xurxodev.moviesandroidkata.MoviesApplication;
 import com.xurxodev.moviesandroidkata.R;
-import com.xurxodev.moviesandroidkata.model.Movie;
+import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 import com.xurxodev.moviesandroidkata.presenter.MoviesPresenter;
 import com.xurxodev.moviesandroidkata.view.adapter.MoviesAdapter;
 
@@ -108,6 +109,11 @@ public class MoviesFragment extends Fragment implements MoviesPresenter.MoviesVi
     @Override
     public void showTotalMovies(int count) {
         refreshTitleWithMoviesCount(count);
+    }
+
+    @Override
+    public void showConnectionError() {
+        Toast.makeText(getActivity(), R.string.connection_error_text, Toast.LENGTH_SHORT).show();
     }
 
     @Override

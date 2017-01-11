@@ -2,12 +2,10 @@ package com.xurxodev.moviesandroidkata;
 
 import android.app.Application;
 
-import com.xurxodev.moviesandroidkata.view.di.AppModule;
-import com.xurxodev.moviesandroidkata.view.di.DaggerMoviesComponent;
-import com.xurxodev.moviesandroidkata.view.di.DataModule;
-import com.xurxodev.moviesandroidkata.view.di.MoviesComponent;
-
-import dagger.Module;
+import com.xurxodev.moviesandroidkata.di.AppModule;
+import com.xurxodev.moviesandroidkata.di.DaggerMoviesComponent;
+import com.xurxodev.moviesandroidkata.di.DataModule;
+import com.xurxodev.moviesandroidkata.di.MoviesComponent;
 
 public class MoviesApplication extends Application {
     private MoviesComponent moviesComponent;

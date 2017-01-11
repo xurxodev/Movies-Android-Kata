@@ -2,8 +2,9 @@ package com.xurxodev.moviesandroidkata.presenter;
 
 import android.os.AsyncTask;
 
-import com.xurxodev.moviesandroidkata.model.Movie;
-import com.xurxodev.moviesandroidkata.presenter.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.entity.Movie;
+import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.usecase.GetMoviesUseCase;
 
 import java.util.List;
 
@@ -11,13 +12,13 @@ import javax.inject.Inject;
 
 public class MoviesPresenter {
 
-    MovieRepository movieRepository;
+    GetMoviesUseCase getMoviesUseCase;
 
     MoviesView view;
 
     @Inject
-    public MoviesPresenter(MovieRepository movieRepository){
-        this.movieRepository = movieRepository;
+    public MoviesPresenter(GetMoviesUseCase getMoviesUseCase){
+        this.getMoviesUseCase = getMoviesUseCase;
     }
 
     public void attachView(MoviesView moviesView){
@@ -29,20 +30,17 @@ public class MoviesPresenter {
     private void loadMovies() {
         loadingMovies();
 
-        AsyncTask<Void, Void, List<Movie>> moviesAsyncTask =
-                new AsyncTask<Void, Void, List<Movie>>() {
-                    @Override
-                    protected List<Movie> doInBackground(Void... params) {
-                        return movieRepository.getMovies();
-                    }
+        getMoviesUseCase.execute(new GetMoviesUseCase.Callback() {
+            @Override
+            public void onMoviesLoaded(List<Movie> movies) {
+                showMovies(movies);
+            }
 
-                    @Override
-                    protected void onPostExecute(List<Movie> movies) {
-                        showMovies(movies);
-                    }
-                };
-
-        moviesAsyncTask.execute();
+            @Override
+            public void onConnectionError() {
+                view.showConnectionError();
+            }
+        });
     }
 
     private void loadingMovies() {
@@ -68,6 +66,7 @@ public class MoviesPresenter {
         void clearMovies();
         void showLoadingText();
         void showTotalMovies(int count);
+        void showConnectionError();
         boolean isReady();
     }
 }
