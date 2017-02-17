@@ -31,7 +31,8 @@ The recommendation for this exercise is:
     1. Identify presentation and view logic
     2. Create presenter for current view and its view abstraction.
     3. Refactoring activity or fragment for implement view abstraction
-    4. Execute the app and verify that all is right
+    4. Play with delay presenter response and verify not exists memory leak to rotate in loading process 
+    5. Execute the app and verify that all is right
     
   * Estra task if you feel with force :)
     1. Create movies detail screen according to mvp pattern
