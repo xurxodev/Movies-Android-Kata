@@ -21,6 +21,7 @@ public class GetMoviesUseCase {
     }
 
     public void execute(final Callback callback) {
+        //TODO use no android dependant async 
         AsyncTask<Void, Void, List<Movie>> moviesAsyncTask =
                 new AsyncTask<Void, Void, List<Movie>>() {
                     @Override

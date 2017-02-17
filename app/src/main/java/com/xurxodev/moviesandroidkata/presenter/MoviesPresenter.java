@@ -1,9 +1,6 @@
 package com.xurxodev.moviesandroidkata.presenter;
 
-import android.os.AsyncTask;
-
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
-import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
 import com.xurxodev.moviesandroidkata.domain.usecase.GetMoviesUseCase;
 
 import java.util.List;
@@ -17,11 +14,11 @@ public class MoviesPresenter {
     MoviesView view;
 
     @Inject
-    public MoviesPresenter(GetMoviesUseCase getMoviesUseCase){
+    public MoviesPresenter(GetMoviesUseCase getMoviesUseCase) {
         this.getMoviesUseCase = getMoviesUseCase;
     }
 
-    public void attachView(MoviesView moviesView){
+    public void attachView(MoviesView moviesView) {
         this.view = moviesView;
 
         loadMovies();
@@ -57,16 +54,21 @@ public class MoviesPresenter {
         }
     }
 
-    public void onRefreshAction(){
+    public void onRefreshAction() {
         loadMovies();
     }
 
     public interface MoviesView {
         void showMovies(List<Movie> movies);
+
         void clearMovies();
+
         void showLoadingText();
+
         void showTotalMovies(int count);
+
         void showConnectionError();
+
         boolean isReady();
     }
 }
