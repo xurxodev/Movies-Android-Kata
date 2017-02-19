@@ -6,7 +6,7 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.xurxodev.moviesandroidkata.R;
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
-import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.boundary.Repository.MovieRepository;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,7 +49,7 @@ public class DiskMovieRepository implements MovieRepository {
 
     private void simulateDelay(){
         try {
-            Thread.sleep(500);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

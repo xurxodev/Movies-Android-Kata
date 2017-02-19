@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.domain.boundary;
+package com.xurxodev.moviesandroidkata.domain.boundary.Repository;
 
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 

@@ -1,48 +1,64 @@
 package com.xurxodev.moviesandroidkata.domain.usecase;
 
-import android.os.AsyncTask;
-
-import com.xurxodev.moviesandroidkata.domain.boundary.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.boundary.Repository.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.boundary.executor.AsyncExecutor;
+import com.xurxodev.moviesandroidkata.domain.boundary.executor.MainExecutor;
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 
 import java.util.List;
 
-public class GetMoviesUseCase {
+public class GetMoviesUseCase implements UseCase {
     public interface Callback {
         void onMoviesLoaded(List<Movie> movies);
 
         void onConnectionError();
     }
 
-    MovieRepository movieRepository;
+    private MovieRepository movieRepository;
+    private AsyncExecutor asyncExecutor;
+    private MainExecutor mainExecutor;
+    private Callback callback;
 
-    public GetMoviesUseCase(MovieRepository movieRepository) {
+    public GetMoviesUseCase(MovieRepository movieRepository, AsyncExecutor asyncExecutor,
+            MainExecutor mainExecutor) {
         this.movieRepository = movieRepository;
+        this.mainExecutor = mainExecutor;
+        this.asyncExecutor = asyncExecutor;
     }
 
     public void execute(final Callback callback) {
-        //TODO use no android dependant async 
-        AsyncTask<Void, Void, List<Movie>> moviesAsyncTask =
-                new AsyncTask<Void, Void, List<Movie>>() {
-                    @Override
-                    protected List<Movie> doInBackground(Void... params) {
+        this.callback = callback;
 
-                        try {
-                            return movieRepository.getMovies();
-                        } catch (Exception exception) {
-                            callback.onConnectionError();
-                            return null;
-                        }
-                    }
-
-                    @Override
-                    protected void onPostExecute(List<Movie> movies) {
-                        if (movies != null) {
-                            callback.onMoviesLoaded(movies);
-                        }
-                    }
-                };
-
-        moviesAsyncTask.execute();
+        asyncExecutor.run(this);
     }
+
+    @Override
+    public void run() {
+        try {
+            List<Movie> movies = movieRepository.getMovies();
+
+            notifyMoviesLoaded(movies);
+        } catch (Exception ex) {
+            notifyConnectionError();
+        }
+    }
+
+    private void notifyConnectionError() {
+        mainExecutor.run(new Runnable() {
+            @Override
+            public void run() {
+                callback.onConnectionError();
+            }
+        });
+    }
+
+    private void notifyMoviesLoaded(final List<Movie> movies) {
+        mainExecutor.run(new Runnable() {
+            @Override
+            public void run() {
+                callback.onMoviesLoaded(movies);
+            }
+        });
+    }
+
 }
