@@ -4,4 +4,6 @@
     <string name="movies_count_text">Movies: %d</string>
     <string name="loading_movies_text">Loading movies...</string>
     <string name="connection_error_text">Has occurred a problem with the network, try next please</string>
+    <string name="image_transition_name">TransitionImage</string>
+    <string name="Overview">Overview</string>
 </resources>

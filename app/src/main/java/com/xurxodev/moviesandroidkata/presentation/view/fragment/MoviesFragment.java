@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xurxodev.moviesandroidkata.MoviesApplication;
 import com.xurxodev.moviesandroidkata.R;
+import com.xurxodev.moviesandroidkata.di.module.ActivityModule;
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 import com.xurxodev.moviesandroidkata.presentation.presenter.MoviesPresenter;
 import com.xurxodev.moviesandroidkata.presentation.view.adapter.MoviesAdapter;
@@ -32,18 +34,23 @@ public class MoviesFragment extends Fragment implements MoviesPresenter.MoviesVi
     private TextView moviesCountTextView;
     private ImageButton refreshButton;
 
+    private ProgressBar progressBarLoading;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ((MoviesApplication) getActivity().getApplication()).getMoviesComponent().inject(this);
+        ((MoviesApplication) getActivity().getApplication()).getAppComponent().activityComponent
+                ().activityModule(
+                new ActivityModule(getActivity())).build().inject(this);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_movies, container, false);
+
+        progressBarLoading = (ProgressBar) getActivity().findViewById(R.id.pb_loading);
 
         initializeTitle();
         initializeRefreshButton();
@@ -78,6 +85,13 @@ public class MoviesFragment extends Fragment implements MoviesPresenter.MoviesVi
 
     private void initializeAdapter() {
         adapter = new MoviesAdapter();
+
+        adapter.setOnMovieClickListener(new MoviesAdapter.OnMovieClickListener() {
+            @Override
+            public void onItemClick(View view, Movie movie) {
+                moviesPresenter.onMovieClicked(movie);
+            }
+        });
     }
 
     private void initializeRecyclerView() {
@@ -97,12 +111,14 @@ public class MoviesFragment extends Fragment implements MoviesPresenter.MoviesVi
     }
 
     @Override
-    public void clearMovies() {
-        adapter.clearMovies();
+    public void hideLoading() {
+        progressBarLoading.setVisibility(View.GONE);
     }
 
     @Override
-    public void showLoadingText() {
+    public void showLoading() {
+        adapter.clearMovies();
+        progressBarLoading.setVisibility(View.VISIBLE);
         moviesCountTextView.setText(R.string.loading_movies_text);
     }
 

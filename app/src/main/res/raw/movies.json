@@ -1,30 +1,37 @@
 [
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/anmLLbDx9d98NMZRyVUtxwJR6ab.jpg",
-    "title": "Inferno"
+    "title": "Inferno",
+    "overview": "After waking up in a hospital with amnesia, professor Robert Langdon and a doctor must race against time to foil a deadly global plot."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/4ynQYtSEuU5hyipcGkfD6ncwtwz.jpg",
-    "title": "Jack Reacher: Never Go Back"
+    "title": "Jack Reacher: Never Go Back",
+    "overview": "Jack Reacher must uncover the truth behind a major government conspiracy in order to clear his name. On the run as a fugitive from the law, Reacher uncovers a potential secret from his past that could change his life forever."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/doqRJwhRFsHHneYG82bM0hSTqpz.jpg",
-    "title": "Star Trek Beyond"
+    "title": "Star Trek Beyond",
+    "overview": "The USS Enterprise crew explores the furthest reaches of uncharted space, where they encounter a mysterious new enemy who puts them and everything the Federation stands for to the test."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/2wgKgQAqso1p1yP6unsq9nl7Xdc.jpg",
-    "title": "Doctor Strange"
+    "title": "Doctor Strange",
+    "overview": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under his wing and trains him to defend the world against evil."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/fpq86AP0YBYUwNgDvUj5kxwycxH.jpg",
-    "title": "The Girl on the Train"
+      "title": "The Girl on the Train",
+    "overview": "Rachel Watson, devastated by her recent divorce, spends her daily commute fantasizing about the seemingly perfect couple who live in a house that her train passes every day, until one morning she sees something shocking happen there and becomes entangled in the mystery that unfolds."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/zjYdnBHbIOYBqKZxvBUsT5MevUA.jpg",
-    "title": "Deepwater Horizon"
+    "title": "Deepwater Horizon",
+    "overview": "A story set on the offshore drilling rig Deepwater Horizon, which exploded during April 2010 and created the worst oil spill in U.S. history."
   },
   {
     "image": "https://image.tmdb.org/t/p/w1300_and_h730_bestv2/xVW8REyVqKwxAtUYY07UGlZH43L.jpg",
-    "title": "A Monster Calls"
+    "title": "A Monster Calls",
+    "overview": "A boy attempts to deal with his mother's illness and the bullying of his classmates by escaping to a fantastical world."
   }
 ]

@@ -2,6 +2,7 @@ package com.xurxodev.moviesandroidkata.presentation.presenter;
 
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 import com.xurxodev.moviesandroidkata.domain.usecase.GetMoviesUseCase;
+import com.xurxodev.moviesandroidkata.presentation.presenter.boundary.Navigator;
 
 import java.util.List;
 
@@ -10,11 +11,13 @@ import javax.inject.Inject;
 public class MoviesPresenter {
 
     GetMoviesUseCase getMoviesUseCase;
+    Navigator navigator;
 
     MoviesView view;
 
     @Inject
-    public MoviesPresenter(GetMoviesUseCase getMoviesUseCase) {
+    public MoviesPresenter(Navigator navigator,GetMoviesUseCase getMoviesUseCase) {
+        this.navigator = navigator;
         this.getMoviesUseCase = getMoviesUseCase;
     }
 
@@ -23,6 +26,7 @@ public class MoviesPresenter {
 
         loadMovies();
     }
+
 
     private void loadMovies() {
         loadingMovies();
@@ -40,15 +44,20 @@ public class MoviesPresenter {
         });
     }
 
+    public void onMovieClicked(Movie movie)
+    {
+        navigator.openMovieDetail(movie);
+    }
+
     private void loadingMovies() {
         if (view.isReady()) {
-            view.clearMovies();
-            view.showLoadingText();
+            view.showLoading();
         }
     }
 
     private void showMovies(List<Movie> movies) {
         if (view.isReady()) {
+            view.hideLoading();
             view.showMovies(movies);
             view.showTotalMovies(movies.size());
         }
@@ -61,9 +70,9 @@ public class MoviesPresenter {
     public interface MoviesView {
         void showMovies(List<Movie> movies);
 
-        void clearMovies();
+        void hideLoading();
 
-        void showLoadingText();
+        void showLoading();
 
         void showTotalMovies(int count);
 

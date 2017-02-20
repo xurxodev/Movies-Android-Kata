@@ -37,8 +37,7 @@
         app:layoutManager="GridLayoutManager"
         app:spanCount="1"
         tools:context=".presentation.view.activity.MoviesActivity"
-        tools:listitem="@layout/item_movies"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        tools:listitem="@layout/item_movies" />
 </android.support.v7.widget.LinearLayoutCompat>
 
 

@@ -1,6 +1,6 @@
 package com.xurxodev.moviesandroidkata.domain.usecase;
 
-import com.xurxodev.moviesandroidkata.domain.boundary.Repository.MovieRepository;
+import com.xurxodev.moviesandroidkata.domain.boundary.repository.MovieRepository;
 import com.xurxodev.moviesandroidkata.domain.boundary.executor.AsyncExecutor;
 import com.xurxodev.moviesandroidkata.domain.boundary.executor.MainExecutor;
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
