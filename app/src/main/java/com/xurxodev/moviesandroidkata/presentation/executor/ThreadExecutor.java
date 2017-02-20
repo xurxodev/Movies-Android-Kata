@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.executor;
+package com.xurxodev.moviesandroidkata.presentation.executor;
 
 import com.xurxodev.moviesandroidkata.domain.boundary.executor.AsyncExecutor;
 import com.xurxodev.moviesandroidkata.domain.usecase.UseCase;

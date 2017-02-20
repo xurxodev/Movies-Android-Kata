@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.presenter;
+package com.xurxodev.moviesandroidkata.presentation.presenter;
 
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
 import com.xurxodev.moviesandroidkata.domain.usecase.GetMoviesUseCase;

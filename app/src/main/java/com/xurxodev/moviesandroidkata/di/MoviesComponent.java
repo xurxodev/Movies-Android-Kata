@@ -1,6 +1,6 @@
 package com.xurxodev.moviesandroidkata.di;
 
-import com.xurxodev.moviesandroidkata.view.fragment.MoviesFragment;
+import com.xurxodev.moviesandroidkata.presentation.view.fragment.MoviesFragment;
 
 import javax.inject.Singleton;
 import dagger.Component;

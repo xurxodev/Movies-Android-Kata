@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.view.fragment;
+package com.xurxodev.moviesandroidkata.presentation.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,8 +14,8 @@ import android.widget.Toast;
 import com.xurxodev.moviesandroidkata.MoviesApplication;
 import com.xurxodev.moviesandroidkata.R;
 import com.xurxodev.moviesandroidkata.domain.entity.Movie;
-import com.xurxodev.moviesandroidkata.presenter.MoviesPresenter;
-import com.xurxodev.moviesandroidkata.view.adapter.MoviesAdapter;
+import com.xurxodev.moviesandroidkata.presentation.presenter.MoviesPresenter;
+import com.xurxodev.moviesandroidkata.presentation.view.adapter.MoviesAdapter;
 
 import java.util.List;
 

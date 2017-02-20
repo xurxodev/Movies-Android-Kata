@@ -1,4 +1,4 @@
-package com.xurxodev.moviesandroidkata.executor;
+package com.xurxodev.moviesandroidkata.presentation.executor;
 
 import android.os.Handler;
 import android.os.Looper;
