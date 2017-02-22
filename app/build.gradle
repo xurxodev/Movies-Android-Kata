@@ -37,4 +37,18 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:2.7'
     compile 'com.google.dagger:dagger:2.7'
     provided 'javax.annotation:jsr250-api:1.0'
+
+
+    //AndroidTests
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+        exclude module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'support-v4'
+        exclude module: 'design'
+    }
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
 }
