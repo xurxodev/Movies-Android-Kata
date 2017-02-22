@@ -27,7 +27,6 @@ public class MoviesPresenter {
         loadMovies();
     }
 
-
     private void loadMovies() {
         loadingMovies();
 
