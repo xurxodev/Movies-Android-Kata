@@ -3,8 +3,10 @@ package com.xurxodev.moviesandroidkata.presentation.view.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.xurxodev.moviesandroidkata.R;
 import com.xurxodev.moviesandroidkata.presentation.view.fragment.MovieDetailFragment;
@@ -19,6 +21,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie_detail);
 
         initializeToolBar();
+        showUpButtonInActionBar();
 
         if (savedInstanceState == null) {
             showDetailFragment();
@@ -41,8 +44,15 @@ public class MovieDetailActivity extends AppCompatActivity {
     }
 
     private void initializeToolBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
+    }
+
+    private void showUpButtonInActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     public static Intent createIntent(Context context, String movieTitle) {
@@ -51,5 +61,18 @@ public class MovieDetailActivity extends AppCompatActivity {
         intent.putExtra(MOVIE_TITLE, movieTitle);
 
         return intent;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+            supportFinishAfterTransition();
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 }
