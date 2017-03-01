@@ -35,15 +35,9 @@ The recommendation for this exercise is:
     5. Execute the app and verify that all is right
 
   * Estra task if you feel with force :)
-    1. Create movies detail screen according to clean architecture
-    2. Create navigator for navigate from movies to movie
-
-
-## Documentation
-
-There are some links which can be useful to finish these tasks:
-
-* [Model-View-Presenter Architecture in Android Applications](http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/)
+    1. Abstracts the domain of the technology used to execute asynchronously and to execute in the main thread
+    2. Create movies detail screen according to clean architecture
+    3. Create navigator for navigate from movies to movie
 
 ##Developed By
 
