@@ -27,7 +27,7 @@ The recommendation for this exercise is:
 
   * Before starting
     1. Fork this repository and Checkout `kata_espresso_movies` branch or download zip.
-    3. Execute the application, explore it manually and make yourself familiar with the code.
+    2. Execute the application, explore it manually and make yourself familiar with the code.
   
   * Test to create:
     1. Create a test that navigate to all detail movies activity and verify title as movie title
@@ -35,7 +35,7 @@ The recommendation for this exercise is:
     3. Create a test that verify that while is retrieving movies loading text is visible
     4. Create a test that verify that while is retrieving movies progress bar is visible
     
-   * Rules
+  * Rules
     1. First create tests without Robot Pattern
     2. After refactoring tests to Robot Pattern
 
