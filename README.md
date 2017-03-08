@@ -1,5 +1,11 @@
-# Movies-Android-Kata
+# Movies-Android-Kata Part4
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
+
+Kata 4
+
+- We are here to practice UI Testing.
+- We are going to use [espresso](https://google.github.io/android-testing-support-library/docs) to interact with the Application UI.
+- We are going to practice pair programming.
 
 ## Considerations
 
@@ -11,6 +17,36 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
+Initial state in this branch is ready to just start writing UI tests.
+
+## Tasks
+
+Your task as Android Developer is to **create Espresso tests**.
+
+The recommendation for this exercise is:
+
+  * Before starting
+    1. Fork this repository and Checkout `kata_espresso_movies` branch or download zip.
+    2. Execute the application, explore it manually and make yourself familiar with the code.
+  
+  * Test to create:
+    1. Create a test that navigate to all detail movies activity and verify title as movie title
+    2. Create a test that verify the number of rows is equal than movies count text
+    3. Create a test that verify that while is retrieving movies loading text is visible
+    4. Create a test that verify that while is retrieving movies progress bar is visible
+    
+  * Rules
+    1. First create tests without Robot Pattern
+    2. After refactoring tests to Robot Pattern
+
+## Documentation
+
+There are some links which can be useful to finish these tasks:
+
+* [androidTestingDocumentation](https://google.github.io/android-testing-support-library)
+* [espressoCheatSheet](https://google.github.io/android-testing-support-library/docs/espresso/cheatsheet/index.html)
+* [espressoIdlingResources](http://dev.jimdo.com/2014/05/09/wait-for-it-a-deep-dive-into-espresso-s-idling-resources)
+
 ##Developed By
 
 * Jorge Sánchez Fernández aka [xurxodev](https://twitter.com/xurxodev)
@@ -18,7 +54,7 @@ This repository contains an Android application to show movies information:
 ##License
 
 
-    Copyright 2016 Jorge Sánchez Fernández
+    Copyright 2017 Jorge Sánchez Fernández
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
