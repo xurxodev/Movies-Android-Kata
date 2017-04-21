@@ -1,5 +1,9 @@
-# Movies-Android-Kata
+
+![](http://xurxodev.com/content/images/2017/04/xurxodev-readme.png) 
+#  Movies Android Kata [![Build Status](https://travis-ci.org/xurxodev/Movies-Android-Kata.svg?branch=master)](https://travis-ci.org/xurxodev/Movies-Android-Kata)
 Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
+
+
 
 ## Considerations
 
@@ -11,11 +15,11 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
-##Developed By
+## Developed By
 
 * Jorge Sánchez Fernández aka [xurxodev](https://twitter.com/xurxodev)
 
-##License
+## License
 
 
     Copyright 2016 Jorge Sánchez Fernández
