@@ -1,7 +1,7 @@
 
 ![](http://xurxodev.com/content/images/2017/04/xurxodev-readme.png) 
 #  Movies Android Kata [![Build Status](https://travis-ci.org/xurxodev/Movies-Android-Kata.svg?branch=master)](https://travis-ci.org/xurxodev/Movies-Android-Kata)
-Movies Android kata for practice Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
+Movies Android kata for practice Clean Architecture and Best Practices in Android implemented by Jorge Sánchez (Xurxodev)
 
 
 
