@@ -15,6 +15,15 @@ This repository contains an Android application to show movies information:
 
 ![](/art/movies.gif)
 
+## Katas
+
+Every branch is a kata for refactor from app without best practices and coupled architecture to Clean Architecture and best practices. Master branch contains final result after all katas.
+
+* [Kata 1: Dependency Injection](https://github.com/xurxodev/Movies-Android-Kata/tree/kata-di-movies)
+* [Kata 2: Model View Presenter](https://github.com/xurxodev/Movies-Android-Kata/tree/kata_mvp_movies)
+* [Kata 3: Clean Architecture - Domain layer](https://github.com/xurxodev/Movies-Android-Kata/tree/kata_domain_data_movies)
+* [Kata 4: Testing with Espresso](https://github.com/xurxodev/Movies-Android-Kata/tree/kata_espresso_movies)
+
 ## Developed By
 
 * Jorge Sánchez Fernández aka [xurxodev](https://twitter.com/xurxodev)
